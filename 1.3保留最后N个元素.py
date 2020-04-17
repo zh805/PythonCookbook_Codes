@@ -56,6 +56,8 @@ if __name__ == "__main__":
     q2.popleft()
     print(q2) 
 
+    # 在deque队列两端插入或删除元素时间复杂度都为o(1)
+    # 在list列表的头部插入或删除元素的时间复杂度为o(n)
 
 
    
