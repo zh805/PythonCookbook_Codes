@@ -1,4 +1,7 @@
-import math
+'''
+@Time    :   2020/04/17 17:58:20
+@Author  :   Zhang Hui
+'''
 
 if __name__ == "__main__":
     
@@ -32,7 +35,6 @@ if __name__ == "__main__":
             do_foo(*args)
         elif tag == 'bar':
             do_bar(*args)
-    
     # 使用星号表达式解压字符串分隔结果
     line = 'nobody:*:-2:-2:Ubprivileged User:/var/empty:/usr/bin/false'
     uname, *fields, homedir, sh = line.split(':')
