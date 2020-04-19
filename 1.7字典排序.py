@@ -15,7 +15,6 @@ from collections import OrderedDict
 # 创建dict并打印
 def normal_dict():
     d = dict()
-    d = OrderedDict()
     d['foo'] = 1
     d['bar'] = 2
     d['spam'] = 3
@@ -37,7 +36,6 @@ def order_dict():
     d['grok'] = 4
     for key in d:
         print(key, d[key])
-
 
 if __name__ == "__main__":
     
