@@ -10,14 +10,16 @@
 
 from collections import deque
 
+
 def search(lines, pattern, history=5):
-    previous_lines = deque(maxlen = history)
+    previous_lines = deque(maxlen=history)
     for li in lines:
         if pattern in li:
             #使用yield生成器函数，把搜索过程代码和使用搜索的代码解耦
             yield li, previous_lines
         # previous_lines存储最近检查过的5行
         previous_lines.append(li)
+
 
 if __name__ == "__main__":
 
@@ -41,7 +43,7 @@ if __name__ == "__main__":
     # 可在队列的两端执行添加和弹出元素的操作
     # q2 = deque()
     # 用列表初始化一个deque
-    q2 = deque([1,2,3])
+    q2 = deque([1, 2, 3])
     print(q2)
     # 在队尾添加元素
     q2.append(4)
@@ -54,10 +56,7 @@ if __name__ == "__main__":
     print(q2)
     # 弹出队头
     q2.popleft()
-    print(q2) 
+    print(q2)
 
     # 在deque队列两端插入或删除元素时间复杂度都为o(1)
     # 在list列表的头部插入或删除元素的时间复杂度为o(n)
-
-
-   

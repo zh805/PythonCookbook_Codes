@@ -1,4 +1,7 @@
 {
-    "python.pythonPath": "C:\\Users\\77166\\envs\\liangchong\\Scripts\\python.exe",
-    "python.linting.enabled": true
+    "python.pythonPath": "C:\\Users\\77166\\envs\\analyze\\Scripts\\python.exe",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.formatting.provider": "yapf"
 }

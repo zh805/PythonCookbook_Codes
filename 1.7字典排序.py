@@ -12,6 +12,7 @@ from collections import OrderedDict
 # 其实从Python3.6开始，dict也是按加入顺序存储键值对了
 # 但是set依然不是按加入顺序存储的
 
+
 # 创建dict并打印
 def normal_dict():
     d = dict()
@@ -22,10 +23,12 @@ def normal_dict():
     for key in d:
         print(key, d[key])
 
+
 def test_set():
     test_set = {'foo', 'bar', 'spam', 'grok'}
     for item in test_set:
         print(item)
+
 
 # 创建OrderedDict并打印
 def order_dict():
@@ -37,18 +40,18 @@ def order_dict():
     for key in d:
         print(key, d[key])
 
+
 if __name__ == "__main__":
-    
+
     # print(help(OrderedDict))
     print('dict order:')
     normal_dict()
-    print('-'*20)
+    print('-' * 20)
     print('set order:')
     test_set()
-    print('-'*20)
+    print('-' * 20)
     print('OrderedDict order')
     order_dict()
-
 """
 OrderedDict内部维护着根据键插入顺序排序的双向链表。每次当一个新元素插入时，
 它会被放入链表尾部。对于一个已经存在的键的重复赋值不会改变键的顺序

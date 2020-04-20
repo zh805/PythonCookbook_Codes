@@ -8,29 +8,21 @@ if __name__ == "__main__":
     # 字典的keys()方法返回一个包含(键、值)对元素视图对象
     # print(help(dict.items))
     # D.items() -> a set-like object providing a view on D's items
-    
+
     # 字典的keys()方法返回一个展现键集合的键视图对象，可以进行交、并、差等set操作
     # print(help(dict.keys))
     # D.keys() -> a set-like object providing a view on D's keys
-    
+
     # 字典的values()方法返回字典值的视图对象，不能进行set操作
     # print(help(dict.values))
     # D.values() -> an object providing a view on D's values
-    
-    a = {
-        'x': 1,
-        'y': 2,
-        'z': 3
-    }
 
-    b = {
-        'w': 10,
-        'x': 11,
-        'y': 2
-    }
+    a = {'x': 1, 'y': 2, 'z': 3}
+
+    b = {'w': 10, 'x': 11, 'y': 2}
 
     print(a.keys())
-    l = a.keys()
+    # l = a.keys()
     # print(l[2]) #TypeError: 'dict_keys' object does not support indexing
     # 字典的keys()不支持下标索引操作
 
@@ -53,6 +45,3 @@ if __name__ == "__main__":
     # 使用现有字典构建一个排除几个指定键的新字典
     c = {key: a[key] for key in a.keys() - {'z', 'w'}}
     print(c.items())
-
-
-

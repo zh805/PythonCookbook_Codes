@@ -4,7 +4,6 @@
 '''
 
 # 怎样在数据字典中执行一些计算操作(比如求最小值、最大值、排序等)
-import os
 
 if __name__ == "__main__":
 
@@ -21,13 +20,13 @@ if __name__ == "__main__":
 
     # 求最低、最高股票价格的股票名称
     # 在min()中提供key参数来获取最小值对应的键的信息
-    lowest_name = min(prices, key= lambda k: prices[k])
+    lowest_name = min(prices, key=lambda k: prices[k])
     print(lowest_name)
-    highest_name = max(prices, key= lambda k: prices[k])
+    highest_name = max(prices, key=lambda k: prices[k])
     print(highest_name)
     # 如果还想得到最小值，需要再次操作
     print(prices[lowest_name])
-    
+
     # print(help(zip()))
     # 使用zip()把字典“反转”为（值，键）元组序列。当比较两个元组时，值会先比较，然后是键。
     # 查找最小、最大股票价格
@@ -39,10 +38,11 @@ if __name__ == "__main__":
     # zip()函数创建的是一个只能访问一次的迭代器
     prices_and_names = zip(prices.values(), prices.keys())
     print(prices_and_names)
-    min_price = min(prices_and_names) # OK
+    min_price = min(prices_and_names)  # OK
     print(min_price)
     try:
-        max_price = max(prices_and_names) # ValueError: max() arg is an empty sequence
+        # ValueError: max() arg is an empty sequence
+        max_price = max(prices_and_names)
     except ValueError:
         print('ValueError: max() arg is an empty sequence')
 
@@ -53,13 +53,3 @@ if __name__ == "__main__":
     }
     print(min(zip(prices_same.values(), prices_same.keys())))
     print(max(zip(prices_same.values(), prices_same.keys())))
-
-
-
-
-
-
-
-
-
-

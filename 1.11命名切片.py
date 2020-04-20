@@ -6,7 +6,6 @@
 # 问题：代码中出现许多硬编码的切片下标，可读性很差，我们想把它们清除
 
 if __name__ == "__main__":
-    
     # print(help(slice))
 
     # 从一个记录字符串的几个固定位置提取出特定的数据字段（比如文件或类似格斯）
@@ -35,8 +34,7 @@ if __name__ == "__main__":
     # print(help(slice.indices))
     '''
     indices(...)
-    S.indices(len) -> (start, stop, stride)
-    
+    S.indices(len) -> (start, stop, stride)   
     Assuming a sequence of length len, calculate the start and stop
     indices, and the stride length of the extended slice described by
     S. Out of bounds indices are clipped in a manner consistent with the
@@ -46,19 +44,11 @@ if __name__ == "__main__":
     # 所有值都会被合适地缩小以满足边界限制，避免IndexError异常
 
     s = slice(5, 50, 2)
-    print('s.start is {}, s.stop is {}, s.step is {}'.format(s.start, s.stop, s.step))
+    print('s.start is {}, s.stop is {}, s.step is {}'.format(
+        s.start, s.stop, s.step))
 
     # 把s映射到str1上
     str1 = 'HelloWorld'
     print(s.indices(len(str1)))
     for i in range(*s.indices(len(str1))):
         print(str1[i])
-    
-
-
-
-
-    
-
-
-

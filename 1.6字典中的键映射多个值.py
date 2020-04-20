@@ -2,6 +2,9 @@
 @Time    :   2020/04/18 00:03:22
 @Author  :   Zhang Hui
 '''
+
+from collections import defaultdict
+
 # 问题：怎样实现一个键对应多个值的字典
 # 解决方案：把键对应的多个值放到另外的容器中，如列表list或集合set
 
@@ -49,12 +52,9 @@ d.__getitem__(k) 让字典d能用d[k]的形式返回键k对应的值
 defaultdict里的default_factory只会在__getitem__里被调用，在其他方法不会发挥作用
 如dd.get('new_value')则是返回None
 '''
-# 例如下
-
-from collections import defaultdict
 
 if __name__ == "__main__":
-        
+
     d = dict()
     try:
         d['new_value']
@@ -63,7 +63,7 @@ if __name__ == "__main__":
 
     dd = defaultdict(list)
     val_1 = dd['new_key']
-    """ 
+    """
     如果键'new_key'在dd中还不存在，则会进行如下步骤
     step1: 调用list()建立一个新列表
     step2: 把'new_key'作为键，新列表作为值，放入dd中

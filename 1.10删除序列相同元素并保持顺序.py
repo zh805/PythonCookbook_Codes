@@ -6,7 +6,7 @@
 # 问题：怎样在一个序列上面保持元素顺序的同时消除重复的值
 
 if __name__ == "__main__":
-    
+
     a = [1, 5, 2, 1, 9, 1, 5, 10]
 
     b = set(a)
@@ -19,7 +19,7 @@ if __name__ == "__main__":
             if item not in l_set:
                 yield item
                 l_set.add(item)
-    
+
     c = list(dedupe(a))
     print('use dedupe,the result is:', c)
 
@@ -33,18 +33,31 @@ if __name__ == "__main__":
             if val not in l_set:
                 yield item
                 l_set.add(val)
-    
-    a_dict = [{'x': 1, 'y':2}, {'x':1, 'y':3}, {'x':1, 'y':2}, {'x':2, 'y':4}]
-    
+
+    a_dict = [{
+        'x': 1,
+        'y': 2
+    }, {
+        'x': 1,
+        'y': 3
+    }, {
+        'x': 1,
+        'y': 2
+    }, {
+        'x': 2,
+        'y': 4
+    }]
+
     # a_dict_dedupe = list(dedupe_key(a_dict)) #TypeError: unhashable type: 'dict'
 
     # 根据x,y的值去重
-    a_dict_dedupe_x_y = list(dedupe_key(a_dict, key= lambda item: (item['x'], item['y'])))
-    print('a_dict_dedupe_x_y result is:',a_dict_dedupe_x_y)
+    a_dict_dedupe_x_y = list(
+        dedupe_key(a_dict, key=lambda item: (item['x'], item['y'])))
+    print('a_dict_dedupe_x_y result is:', a_dict_dedupe_x_y)
 
     # 根据x的值去重
     a_dict_dedupe_x = list(dedupe_key(a_dict, key=lambda item: item['x']))
-    print('a_dict_dedupe_x result is:',a_dict_dedupe_x)
+    print('a_dict_dedupe_x result is:', a_dict_dedupe_x)
 
     # 本节使用生成器让函数更加通用，不仅仅局限于列表处理，还可以读取一个文件，消除重复行
     '''
@@ -52,6 +65,3 @@ if __name__ == "__main__":
         for line in dedupe(f):
             ...
     '''
-
-
-

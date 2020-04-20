@@ -4,10 +4,10 @@
 '''
 
 if __name__ == "__main__":
-    p = (3,4)
+    p = (3, 4)
     a, b = p
     print(a, b)
-    
+
     # 变量的数量要与序列元素数量相同
 
     # c, d, e = p
@@ -29,14 +29,3 @@ if __name__ == "__main__":
 
     _, shares, price, _ = data
     print(shares, price)
-
-
-
-
-
-
-
-
-
-
-
