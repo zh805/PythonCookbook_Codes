@@ -34,7 +34,7 @@ if __name__ == "__main__":
     # print(help(slice.indices))
     '''
     indices(...)
-    S.indices(len) -> (start, stop, stride)   
+    S.indices(len) -> (start, stop, stride)
     Assuming a sequence of length len, calculate the start and stop
     indices, and the stride length of the extended slice described by
     S. Out of bounds indices are clipped in a manner consistent with the

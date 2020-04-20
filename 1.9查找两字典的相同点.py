@@ -29,7 +29,8 @@ if __name__ == "__main__":
     # keys()和items()可以进行交、并、差
     # Find keys in common
     print(a.keys() & b.keys())
-    # print(a.keys() + b.keys()) # TypeError: unsupported operand type(s) for +: 'dict_keys' and 'dict_keys'
+    # print(a.keys() + b.keys())
+    # # TypeError: unsupported operand type(s) for +: 'dict_keys' and 'dict_keys'
 
     # Find keys in a that not in b
     print(a.keys() - b.keys())
@@ -39,7 +40,8 @@ if __name__ == "__main__":
 
     # values()不支持集合操作。值视图不能保证所有值互不相同，导致某些集合操作会出现问题。
     # 但是可以将值集合转换成set,再执行集合运算
-    # print(a.values() & b.values()) # TypeError: unsupported operand type(s) for &: 'dict_values' and 'dict_values'
+    # print(a.values() & b.values())
+    # TypeError: unsupported operand type(s) for &: 'dict_values' and 'dict_values'
     print(set(a.values()) & set(b.values()))
 
     # 使用现有字典构建一个排除几个指定键的新字典

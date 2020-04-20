@@ -39,7 +39,8 @@ list, set, and tuple.
 '''
 The default factory is called without arguments to produce a new value when a key is not present, in __getitem__ only.
 A defaultdict compares equal to a dict with the same items.
-All remaining arguments are treated the same as if they were passed to the dict constructor, including keyword arguments.
+All remaining arguments are treated the same as if they were passed to the dict constructor,
+including keyword arguments.
 '''
 
 '''
@@ -47,7 +48,7 @@ d.get(k, [default]) 没有键k，则返回None或者default
 d.__getitem__(k) 让字典d能用d[k]的形式返回键k对应的值
 '''
 
-''' 
+'''
 实例化一个defaultdict时，需要为构造方法提供一个可调用对象default_factory。这个可调用对象会在__getitem__找不到键的时候被调用，让__getitem__返回某种默认值。
 defaultdict里的default_factory只会在__getitem__里被调用，在其他方法不会发挥作用
 如dd.get('new_value')则是返回None
