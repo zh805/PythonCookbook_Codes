@@ -25,6 +25,7 @@ if __name__ == "__main__":
 
     # 如果序列中的元素不是hashanle类型(比如dict)的，则需要把先把元素转化为hashable的
     # 添加一个key参数，把序列元素转换为hashable类型
+    # key参数模仿sorted()、min()、max()
     def dedupe_key(items, key=None):
         l_set = set()
         for item in items:
@@ -51,6 +52,6 @@ if __name__ == "__main__":
         for line in dedupe(f):
             ...
     '''
-    
+
 
 
