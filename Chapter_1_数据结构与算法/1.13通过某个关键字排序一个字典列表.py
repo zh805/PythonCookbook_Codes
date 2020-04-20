@@ -34,5 +34,3 @@ if __name__ == '__main__':
     # itemgetter同样可用于min()、max()函数
     print(min(rows, key=itemgetter('uid')))
     print(max(rows, key=itemgetter('uid')))
-    
-
