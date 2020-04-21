@@ -18,10 +18,12 @@ if __name__ == '__main__':
     # 列表推导式缺点：输入特别大的时候会产生一个非常大的结果集，占用大量内存
     # 可以使用生成器表达式解决
 
+
     def pos(items):
         for n in items:
             if n > 5:
                 yield n
+
     # print(pos(my_list)) # <generator object pos at 0x036CEC00>
     print(list(pos(my_list)))
 
@@ -34,7 +36,7 @@ if __name__ == '__main__':
     # 在过滤元素时，如果需要处理一些异常或复杂的逻辑，可以使用内建的filter()函数
     # print(help(filter))
     # class filter(object)
-    # filter(function or None, iterable) --> filter object  
+    # filter(function or None, iterable) --> filter object
     # Return an iterator yielding those items of iterable for which function(item)
     # is true. If function is None, return the items that are true.
 
@@ -60,7 +62,7 @@ if __name__ == '__main__':
     clip_neg = [n if n > 0 else 0 for n in my_list_2]
     print(clip_neg)
 
-    # print(help(itertools.compress))    
+    # print(help(itertools.compress))
     # class compress(builtins.object)
     # compress(data, selectors) --> iterator over selected data
     # Return data elements corresponding to true selector elements.
