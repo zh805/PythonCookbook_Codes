@@ -31,6 +31,7 @@ if __name__ == '__main__':
     print(line_sp)
 
     # 正则表达式中包含括号捕获分组，则被匹配的文本也将出现在结果列表中
+    # https://www.runoob.com/regexp/regexp-metachar.html
     line_sp_2 = re.split(r'(;|,|\s)\s*', line)
     print(line_sp_2)
 
