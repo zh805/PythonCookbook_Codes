@@ -7,6 +7,9 @@
 
 # 解决方案：re.split()
 
+# 正则表达式教程
+# https://www.runoob.com/regexp/regexp-syntax.html
+
 import re
 
 if __name__ == '__main__':
