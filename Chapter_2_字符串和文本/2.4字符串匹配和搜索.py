@@ -41,7 +41,7 @@ if __name__ == '__main__':
     # match()总是从字符串开始去匹配，如果想查找字符串任意部分的模式出现位置，
     # 使用findall()方法代替
 
-    text3 = '11/27/2012. PyCon starts 3/13/2013.'
+    text3 = 'Today is 11/27/2012. PyCon starts 3/13/2013.'
     print(detepat.findall(text3))
 
     # 定义正则表达式时，用括号去捕获分组
@@ -50,7 +50,7 @@ if __name__ == '__main__':
 
     text4 = '11/27/2012'
     m = detepat_2.match(text4)
-    print('m.groups() is:', m.groups())
+    print('m.groups() is :', m.groups())
     print(m.group(0), m.group(1), m.group(2), m.group(3))
 
     # 可以把捕获分组中的内容提取出来，方便后续处理
