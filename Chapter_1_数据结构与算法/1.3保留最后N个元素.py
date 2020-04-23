@@ -8,6 +8,7 @@
 # 使用collections.deque
 # 在多行上面作简单的文本匹配，当匹配成功时，输出当前匹配成功的行和最近检查过的N行文本
 
+import os
 from collections import deque
 
 
@@ -15,7 +16,7 @@ def search(lines, pattern, history=5):
     previous_lines = deque(maxlen=history)
     for li in lines:
         if pattern in li:
-            #使用yield生成器函数，把搜索过程代码和使用搜索的代码解耦
+            # 使用yield生成器函数，把搜索过程代码和使用搜索的代码解耦
             yield li, previous_lines
         # previous_lines存储最近检查过的5行
         previous_lines.append(li)
@@ -23,7 +24,10 @@ def search(lines, pattern, history=5):
 
 if __name__ == "__main__":
 
-    with open(r'somefile.txt') as f:
+    print(os.getcwd())
+    print(os.path.dirname(__file__))
+    filepath = os.path.join(os.path.dirname(__file__), 'somefile.txt')
+    with open(filepath) as f:
         for line, prevlines in search(f, 'Python', 5):
             for pline in prevlines:
                 print(pline, end='')
