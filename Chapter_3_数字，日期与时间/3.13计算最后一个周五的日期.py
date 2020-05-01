@@ -35,4 +35,3 @@ if __name__ == '__main__':
     print(get_previous_byday('Friday'))
 
     print(get_previous_byday('Sunday', datetime(2012, 12, 21)))
-
