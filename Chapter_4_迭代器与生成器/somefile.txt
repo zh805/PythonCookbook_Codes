@@ -1,3 +1,6 @@
+##
+#test for 4.8
+##
 python is powerful... and fast;
 plays well with others;
 runs everywhere;
@@ -14,6 +17,7 @@ The community hosts conferences and meetups, collaborates on code,
 and much more. Python's documentation will help you along the way,
 and the mailing lists will keep you in touch.
 
+# test for 4.8
 Conferences and Workshops
 python Documentation
 Mailing Lists and IRC channels
