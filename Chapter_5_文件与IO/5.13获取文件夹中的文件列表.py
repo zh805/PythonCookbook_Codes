@@ -38,4 +38,3 @@ if __name__ == '__main__':
     file_metadata = [(name, os.stat(name)) for name in pyfiles]
     for name, meta in file_metadata:
         print(name, meta.st_size, meta.st_mtime)
-
