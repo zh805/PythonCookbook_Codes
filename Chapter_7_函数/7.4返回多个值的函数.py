@@ -18,6 +18,7 @@ if __name__ == '__main__':
     # 元组解包
     x, *y = myfunc()
     print(x, y)
+    print(type(y))
 
     x, *y, z = myfunc()
     print(x, y, z)

@@ -11,7 +11,7 @@ if __name__ == "__main__":
         # print(middle)
         return sum(middle) / len(middle)
 
-    # def drop_first_last_2(first, *middle, last): # las为关键字参数，接收不到值
+    # def drop_first_last_2(first, *middle, last): # last为强制关键字参数，必须传last=xxx
     def drop_first_last_2(first, *middle):
         print(first)
         print(middle)
